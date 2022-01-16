@@ -4,6 +4,8 @@ var podname= process.env.HOSTNAME;
 var startTime;
 var host;
 
+///request handling code
+
 var handleRequest = function(request, response) {
   response.setHeader('Content-Type', 'text/plain');
   response.writeHead(200);
@@ -14,7 +16,7 @@ var handleRequest = function(request, response) {
 var www = http.createServer(handleRequest);
 
 
-
+///request server listening
 
 www.listen(8080,function () {
     startTime = new Date();;
